@@ -13,7 +13,6 @@
         <label for="weight">Enter your weight(kg): </label>
         <input type="number" name="weight" id="weight" min="0.1" max="300" step="0.1">
         <input type="submit" value="Submit data">
-
     </form>
 </body>
 </html>
