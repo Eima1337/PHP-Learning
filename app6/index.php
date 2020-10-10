@@ -46,7 +46,7 @@
                 "Matas" => 86,
                 "Vytenis" => 100
              );
-
+            $people = array_push_assoc($people, "Mantas", 120);
             echo "<br> The lightiest person is: " . array_search(min($people), $people) . ".";
             echo "<br> The heaviest person is: " . array_search(max($people), $people) . ".";
             $key = array_keys($people);
@@ -60,6 +60,11 @@
             arsort($people);
             echo "<br>";
             print_r($people);
+            function array_push_assoc($array, $key, $value) {
+                $array[$key] = $value;
+                return $array;
+            }
+
     ?>
 </body>
 </html>
