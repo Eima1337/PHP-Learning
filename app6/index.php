@@ -34,13 +34,32 @@
                     $sum += $array[$keys[$i]][$j];
                 }
                 $avg = $sum / count($array[$keys[$i]]);
-                echo $keys[$i] . " average is: " . $avg . ". ";
+                print $keys[$i] . " average is: " . $avg . ". ";
              }
       
         // print_r($array['Tomas']);
         // print_r(array_keys($array));
+            $people = array(
+                "Tomas" => 80,
+                "Deivis" => 90,
+                "Agne" => 55,
+                "Matas" => 86,
+                "Vytenis" => 100
+             );
 
-
+            echo "<br> The lightiest person is: " . array_search(min($people), $people) . ".";
+            echo "<br> The heaviest person is: " . array_search(max($people), $people) . ".";
+            $key = array_keys($people);
+            $sum = array_sum($people);
+            // echo $sum;
+            if ($sum > 400) {
+                echo "<br> Lift is overloaded!";
+            } else {
+                echo "<br> You may choose your destination floor!";
+            }
+            arsort($people);
+            echo "<br>";
+            print_r($people);
     ?>
 </body>
 </html>
