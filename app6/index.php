@@ -57,9 +57,13 @@
             } else {
                 echo "<br> You may choose your destination floor!";
             }
-            arsort($people);
+            // arsort($people);
             echo "<br>";
-            print_r($people);
+            arsort($people);
+            for ($i = 0; $i < count($people); $i++) {
+                print_r($key[$i]);
+            }
+            // print_r($people);
             function array_push_assoc($array, $key, $value) {
                 $array[$key] = $value;
                 return $array;
