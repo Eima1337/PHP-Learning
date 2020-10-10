@@ -18,16 +18,6 @@
             "Egle" => [10, 10, 10, 10, 10]
         );
         // print_r($array);
-        // $sum_0 = array_sum($array['Tomas']);
-        // $count_0 = count($array['Tomas']);
-        // $avg_0 = $sum_0 / $count_0;
-        // $sum_1 = array_sum($array['Matas']);
-        // $count_1 = count($array['Matas']);
-        // $avg_1 = $sum_1 / $count_1;
-        // $sum_2 = array_sum($array['Egle']);
-        // $count_2 = count($array['Egle']);
-        // $avg_2 = $sum_2 / $count_2;
-        // print("<br><br> Tomo vidurkis: " . $avg_0 . "Mato vidurkis: " . $avg_1 . "Egles vidurkis: " . $avg_2);
         // foreach($array as $student => $grades) {
         //     $sum = 0;
         //     foreach($grades as $grade) {
@@ -37,14 +27,20 @@
         //     $avg = $sum / $count;
         //     print($student . " " . " average is: " . $avg . ". ");
         // }
-        $length1 = count($array);
-        // for($i = 0; $i < $length1; $i++) {
-        //     $sum = array_sum($array[$i]);
-        //     print($sum);
-            
-        // }
+            $keys = array_keys($array);
+            for ($i = 0; $i < count($array); $i++) {
+                $sum = 0;
+                for ($j = 0; $j < count($array[$keys[$i]]); $j++) {
+                    $sum += $array[$keys[$i]][$j];
+                }
+                $avg = $sum / count($array[$keys[$i]]);
+                echo $keys[$i] . " average is: " . $avg . ". ";
+             }
+      
         // print_r($array['Tomas']);
-        print_r(array_keys($array));
+        // print_r(array_keys($array));
+
+
     ?>
 </body>
 </html>
