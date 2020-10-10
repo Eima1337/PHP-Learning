@@ -49,7 +49,7 @@
             $people = array_push_assoc($people, "Mantas", 120);
             echo "<br> The lightiest person is: " . array_search(min($people), $people) . ".";
             echo "<br> The heaviest person is: " . array_search(max($people), $people) . ".";
-            $key = array_keys($people);
+            
             $sum = array_sum($people);
             // echo $sum;
             if ($sum > 400) {
@@ -60,6 +60,7 @@
             // arsort($people);
             echo "<br>";
             arsort($people);
+            $key = array_keys($people);
             for ($i = 0; $i < count($people); $i++) {
                 print_r($key[$i]);
             }
