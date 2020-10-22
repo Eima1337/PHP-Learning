@@ -19,7 +19,6 @@
             echo("<tr><td>" . (is_file($cont) ? "File" : "Dir") . "</td>");
             echo("<td>" . $cont . "</td>");
             echo("<td>" . "X" . "</td></tr>");
-            // print("<pre>" . $cont);
         }
         echo("</table>");
     ?>
